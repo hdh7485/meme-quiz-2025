@@ -1,103 +1,82 @@
-# 🔥 2025 Meme Quiz
+# 🔥 2025-2026 한국 밈 퀴즈
 
-Test your knowledge of 2025's most viral internet memes!
+당신의 밈 지식을 테스트하세요! 2025-2026년 가장 핫한 한국 밈 12문제.
 
-## Features
+## 📋 퀴즈 내용
 
-- 12 questions covering the biggest memes of 2025
-- Beautiful, responsive design
-- Share your score on social media
-- SEO optimized for discovery
-- Google AdSense ready
+**12가지 2025-2026 한국 밈:**
+1. 괜찮아 딩딩딩 (인도네시아 스트리머 알딘 테가르)
+2. 골반통신 (크리에이터 퐁귀)
+3. 이탈리안 브레인롯 (AI 기괴 캐릭터)
+4. 테토남/녀 (호르몬 신조어)
+5. 첫번째 레슨 (동방신기 유노윤호)
+6. 힙사사돈 (노아주다)
+7. 윤정아 왜요쌤 (2026 초등학생 릴스)
+8. 난리자베스 (2026 신조어)
+9. 좋🤙다👍 (2026 손동작 밈)
+10. 운동 많이 된다 (김동현 UFC 파이터)
+11. 단어 습득하는 몬스터 (엑스 밈)
+12. 놀기 신청하러 온 거야 (김냄비 고양이)
 
-## Memes Covered
+## ✨ 기능
 
-1. **6-7** - The meaningless meme that became word of the year
-2. **100 Men vs. Gorilla** - The debate that broke the internet
-3. **Anthropologie Rock** - The $150 rock joke
-4. **Morgan Wallen's "God's Country"** - SNL aftermath
-5. **Le Poisson Steve** - The little French fish
-6. **Papal Conclave** - Religious event goes viral
-7. **Bobby Hill's Wabi-Sabi** - Embracing imperfection
-8. **Duke-White Lotus** - Perfect timing meme
-9. **Holy F-ing Airball** - Basketball subversion
-10. **Trump Take Egg** - Political egg meme
-11. **Weapons Run** - Movie scene goes IRL
-12. **Group 7** - Accidental viral promotion
+- ✅ 12개 질문 (2025-2026 최신 한국 밈)
+- ✅ 진행률 표시
+- ✅ 즉각적인 정답/오답 피드백
+- ✅ 점수 공유 (Twitter, 링크 복사)
+- ✅ 상세한 설명 제공
+- ✅ 반응형 디자인 (모바일 최적화)
+- ✅ Google AdSense 준비
 
-## Monetization Strategy
+## 🚀 배포
 
-### Phase 1: Traffic Building
-- SEO optimization for meme-related keywords
-- Social media sharing features
-- Viral potential through score sharing
+### GitHub Pages로 배포
 
-### Phase 2: Ad Integration
-1. **Google AdSense**
-   - Apply once you have consistent traffic (1000+ visitors/day)
-   - Place ads at top and bottom of quiz
-   - Consider in-quiz native ads
+1. **GitHub 저장소 생성**
+   ```bash
+   # GitHub.com에서 새 저장소 생성: meme-quiz-2025-kr
+   ```
 
-2. **Alternative Revenue Streams**
-   - Affiliate links to meme merchandise
-   - Sponsored quiz questions (brand integration)
-   - Premium quiz versions
+2. **코드 Push**
+   ```bash
+   git remote add origin https://github.com/YOUR-USERNAME/meme-quiz-2025-kr.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-### Expected Revenue
-- **CPM**: $2-5 for meme/entertainment content
-- **10,000 visitors/month**: $20-50/month
-- **100,000 visitors/month**: $200-500/month
-- Viral potential could significantly increase these numbers
+3. **GitHub Pages 활성화**
+   - Settings → Pages → Source: `main` branch
+   - 2-3분 후 사이트 라이브!
 
-## Setup Instructions
+### 또는 원클릭 배포
 
-### Local Development
-1. Clone this repository
-2. Open `index.html` in a browser
-3. No build process needed - pure HTML/CSS/JS
+```bash
+./deploy.sh
+```
 
-### Deploy to GitHub Pages
-1. Push to GitHub repository
-2. Go to Settings → Pages
-3. Select main branch as source
-4. Your quiz will be live at `https://yourusername.github.io/meme-quiz-2025/`
+## 💰 수익화
 
-### Adding Google AdSense
-1. Apply for AdSense account
-2. Get approved (requires domain and traffic)
-3. Replace placeholder comments in `index.html` with your AdSense code
-4. Add ad units where marked
+Google AdSense 광고 공간 3곳 준비 완료:
+- 상단 헤더
+- 퀴즈 중간
+- 하단 결과
 
-## Marketing Tips
+트래픽 확보 후 AdSense 코드 삽입만 하면 됩니다!
 
-1. **Social Media**
-   - Post on Reddit (r/memes, r/dankmemes)
-   - Share on Twitter/X with viral meme hashtags
-   - TikTok videos showing quiz results
+## 📱 마케팅 아이디어
 
-2. **SEO**
-   - Target keywords: "2025 meme quiz", "viral meme test", "internet culture quiz"
-   - Create blog posts about each meme
-   - Link from other meme-related content
+- 디시인사이드 (밈 갤러리)
+- 에펨코리아
+- 트위터/X
+- 인스타그램 릴스
+- 틱톡
 
-3. **Viral Mechanics**
-   - Perfect score is challenging - encourages retries
-   - Social sharing is prominent
-   - Results are shareable and brag-worthy
+## 🛠️ 기술 스택
 
-## Future Enhancements
+- Pure HTML/CSS/JavaScript (빌드 불필요)
+- 반응형 디자인
+- SEO 최적화
 
-- [ ] Add more questions
-- [ ] Monthly updated quizzes
-- [ ] Leaderboard system
-- [ ] Different difficulty levels
-- [ ] Meme image integration
-- [ ] Localized versions (different countries)
+## 📄 라이선스
 
-## License
-
-MIT License - Feel free to fork and customize!
-
-## Credits
-
-Created for meme enthusiasts everywhere 🔥
+MIT
