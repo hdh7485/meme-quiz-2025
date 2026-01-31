@@ -89,6 +89,7 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 let userAnswers = [];
+let isAnswering = false;
 
 // Fisher-Yates shuffle algorithm
 function shuffleArray(array) {
@@ -104,6 +105,7 @@ function startQuiz() {
     currentQuestion = 0;
     score = 0;
     userAnswers = [];
+    isAnswering = false;
     showScreen('quiz-screen');
     loadQuestion();
 }
@@ -151,11 +153,19 @@ function loadQuestion() {
 }
 
 function selectOption(selectedIndex, correctIndex, selectedText) {
+    // 이미 답변 중이면 무시
+    if (isAnswering) return;
+    isAnswering = true;
+    
     const question = questions[currentQuestion];
     const options = document.querySelectorAll('.option');
     
-    // Disable all options
-    options.forEach(opt => opt.classList.add('disabled'));
+    // Disable all options (클릭 이벤트 완전 제거)
+    options.forEach(opt => {
+        opt.classList.add('disabled');
+        opt.onclick = null;
+        opt.style.pointerEvents = 'none';
+    });
     
     // Mark selected
     options[selectedIndex].classList.add('selected');
@@ -181,6 +191,7 @@ function selectOption(selectedIndex, correctIndex, selectedText) {
     
     // Move to next question after delay
     setTimeout(() => {
+        isAnswering = false;
         currentQuestion++;
         if (currentQuestion < questions.length) {
             loadQuestion();
