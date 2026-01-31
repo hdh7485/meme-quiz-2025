@@ -107,6 +107,13 @@ function startQuiz() {
     userAnswers = [];
     isAnswering = false;
     showScreen('quiz-screen');
+    
+    // 옵션 컨테이너 초기화
+    const optionsContainer = document.getElementById('options-container');
+    if (optionsContainer) {
+        optionsContainer.style.pointerEvents = 'auto';
+    }
+    
     loadQuestion();
 }
 
@@ -143,6 +150,9 @@ function loadQuestion() {
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = '';
     
+    // 먼저 클릭 차단
+    optionsContainer.style.pointerEvents = 'none';
+    
     shuffled.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
@@ -150,6 +160,12 @@ function loadQuestion() {
         optionDiv.onclick = () => selectOption(index, newCorrectIndex, option.text);
         optionsContainer.appendChild(optionDiv);
     });
+    
+    // 300ms 후 클릭 활성화 (이전 클릭 이벤트 차단)
+    setTimeout(() => {
+        isAnswering = false;
+        optionsContainer.style.pointerEvents = 'auto';
+    }, 300);
 }
 
 function selectOption(selectedIndex, correctIndex, selectedText) {
@@ -159,12 +175,15 @@ function selectOption(selectedIndex, correctIndex, selectedText) {
     
     const question = questions[currentQuestion];
     const options = document.querySelectorAll('.option');
+    const optionsContainer = document.getElementById('options-container');
+    
+    // 전체 옵션 컨테이너 차단
+    optionsContainer.style.pointerEvents = 'none';
     
     // Disable all options (클릭 이벤트 완전 제거)
     options.forEach(opt => {
         opt.classList.add('disabled');
         opt.onclick = null;
-        opt.style.pointerEvents = 'none';
     });
     
     // Mark selected
@@ -191,7 +210,6 @@ function selectOption(selectedIndex, correctIndex, selectedText) {
     
     // Move to next question after delay
     setTimeout(() => {
-        isAnswering = false;
         currentQuestion++;
         if (currentQuestion < questions.length) {
             loadQuestion();
