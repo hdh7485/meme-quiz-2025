@@ -158,6 +158,13 @@ header h1 {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
+.meme-image {
+    font-size: 5em;
+    margin: 20px 0;
+    animation: bounce 1s ease infinite;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+}
+
 .options-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -187,13 +194,16 @@ header h1 {
 
 .option.correct {
     border-color: var(--success);
-    background: rgba(16, 172, 132, 0.1);
+    background: rgba(16, 172, 132, 0.3);
+    color: var(--success);
+    font-weight: bold;
     animation: pulse 0.5s ease;
 }
 
 .option.incorrect {
     border-color: var(--error);
-    background: rgba(238, 90, 111, 0.1);
+    background: rgba(238, 90, 111, 0.3);
+    color: var(--error);
     animation: shake 0.5s ease;
 }
 
@@ -337,6 +347,11 @@ footer p {
     75% { transform: translateX(10px); }
 }
 
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 {
@@ -349,6 +364,10 @@ footer p {
     
     .question-text {
         font-size: 1.3em;
+    }
+    
+    .meme-image {
+        font-size: 3.5em;
     }
     
     .score-display {
